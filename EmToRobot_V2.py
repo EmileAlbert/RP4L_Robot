@@ -4,12 +4,6 @@ import sys
 import time
 import math
 
-"""
-TODO
-
-"""
-
-
 class EmToRobot(object):
     def __init__(self, PinsMotorLeft, PinsMotorRight, listPinSensor):
         self.motor = {"MotorLeft": PinsMotorLeft,
@@ -115,17 +109,17 @@ class EmToRobot(object):
 
         self.Stop()
 
-    def PathLength_Right(self, channel):
+    def PathLength_Right(self):
         # 20 rising edge corresponds to 7cm*pi = 21.99 cm
         self.pathLenght_Right += 21.99/20
         return self.pathLenght_Right
 
-    def PathLength_Left(self, channel):
+    def PathLength_Left(self):
         # 20 rising edge corresponds to 7cm*pi = 21.99 cm
         self.pathLenght_Left += 21.99/20
         return self.pathLenght_Left
 
-    #ToDO : Algorithm to make several and have a more reliable distance value
+    #ToDO : Algorithm to make several measure and have a more reliable distance value
     def StopAlert(self, trig):
         GPIO.output(self.US_trigg, False)
         time.sleep(0.1)
