@@ -88,6 +88,7 @@ class EmToRobot(object):
         Turn of 90° is equals to turn of 90° on the left and -90° is equals to a turn of 90° on the right
         """
 
+        bendRadius -= 8
         wheelRatio = bendRadius/(bendRadius+16)  # wheelRatio < 1
         lenghtToDo = 2*math.pi()*bendRadius*(angle/360)
 
