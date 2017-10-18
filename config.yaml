@@ -1,0 +1,20 @@
+Motor :
+  Connections:
+    LeftPin+  : 23
+    LeftPin-  : 22
+    RightPin+ : 4
+    RightPin- : 17
+  PWMFrequency : 50
+  PWMDefaultSpeed : 0.8
+  PwmRegulationFactor : 10000
+Sensors :
+  Odometers:
+    Connections:
+      LeftPin: 18
+      RightPin: 21
+    Bounce_time: 20
+  Ultrasound:
+    Connections:
+      Echo : 25
+      Trigg : 24
+
